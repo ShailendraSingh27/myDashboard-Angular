@@ -7,7 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProfileSidenavComponent } from './profile-sidenav/profile-sidenav.component';
-import { AboutComponent } from './about/about.component';
+import { ProfileInfoComponent } from './profile-info/profile-info.component';
+
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     AppComponent,
     NavBarComponent,
     ProfileSidenavComponent,
-    AboutComponent
+    ProfileInfoComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,7 @@ import { AboutComponent } from './about/about.component';
     RouterModule.forRoot([
       {
         path: '',
-        component: ProfileSidenavComponent
+        component: ProfileInfoComponent
       }
 
     ])
