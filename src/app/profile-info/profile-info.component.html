@@ -31,33 +31,30 @@
   </div>
   <!--Experience tag Finish-->
 
-
   <!--Education tag start-->
-  <div class="card text-center mb-5">
-    <div class="card-header"> 
-      <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="MCA">MCA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="BCA">BCA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#">Disabled</a>
-        </li>
-      </ul>
-    </div>
-    <div class="card-body" id="MCA">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <div class="card-body" id="BCA">
-      <h5 class="card-title">Special title BCA</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="card mb-5">
+      <h5 class="card-header">Education</h5>
+    <div class="card-body">
+        <ul class="nav-tabs nav">
+             <li class="nav-item">
+               <a data-toggle="tab" class="nav-link" [class.active]="isMCAActive" (click)="onClickMCA()">  MCA</a>
+             </li>
+             <li class="nav-item">
+                <a data-toggle="tab" class="nav-link" [class.active]="isBCAActive" (click)="onClickBCA()"> BCA</a>
+              </li>
+              <li class="nav-item">
+                  <a data-toggle="tab" class="nav-link" [class.active]="isXIIActive" (click)="onClickXII()"> XII</a>
+              </li>                          
+        </ul>
+        <div class="tab-content">
+          <div [class.d-none]="!isMCAActive">MCA</div>
+          <div [class.d-none]="!isBCAActive">BCA</div>
+          <div [class.d-none]="!isXIIActive">XII</div>
+        </div>
+            
     </div>
   </div>
+  
   <!--Education tag Finish-->
 
 
@@ -80,3 +77,5 @@
   <!--Experience tag Finish-->
 
 </div>
+
+
