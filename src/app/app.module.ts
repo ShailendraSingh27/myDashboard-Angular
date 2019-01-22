@@ -6,26 +6,29 @@ import { NgbModule }  from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileSidenavComponent } from './profile-sidenav/profile-sidenav.component';
+import { AboutComponent } from './about/about.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    ProfileComponent
+    ProfileSidenavComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-
     RouterModule.forRoot([
       {
         path: '',
-        component: ProfileComponent
+        component: ProfileSidenavComponent
       }
 
     ])
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
